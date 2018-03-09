@@ -1,0 +1,24 @@
+
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+import math
+def hs(a,b,c):
+	if b*b-4*a*c>=0 and a!=0:
+		x1=(-b+math.sqrt(b*b-4*a*c))/(2*a)
+		x2=(-b-math.sqrt(b*b-4*a*c))/(2*a)
+		return (x1,x2)
+	elif a==0:
+		x1=x2=-c/b
+		return(x1)
+	else:
+		return(print('该方程无实数解'))
+
+print('二元一次方程的解')
+print('ax²+bx+c=0')
+a=int (input('请输入a的值:'))
+b=int (input('请输入b的值:'))
+c=int (input('请输入c的值:'))
+
+print(hs(a,b,c))
